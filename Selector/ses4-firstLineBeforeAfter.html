@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การเลือกเอลิเมนต์ด้วย Psendo-Element Selector</title>
+    <style>
+        #mainDiv {
+            background-color: aqua;
+            width: 480px;
+            text-align: justify;
+        }
+        p {
+            padding: 10px 10px 5px 5px;
+        }
+        h2 + p::first-line{
+            font-style: italic;
+            color: gray;
+        }
+        h2 + p::first-letter{
+            font-size: 32em;
+            color: aquamarine;
+            font-family: helvetica;
+            float: left;
+            padding: 3px 3px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+<div id="mainDiv">
+    <h1>การเลือกเอลิเมนต์ด้วย Psendo-Element Selector</h1>
+    <article>
+        <h2>First Article</h2>
+        <p>
+            Hello World! Hello World! Hello World!
+            Hello World! Hello World! Hello World!
+            Hello World! Hello World! Hello World!
+            Hello World! Hello World! Hello World!
+            Hello World! Hello World! Hello World!
+        </p>
+        <p>
+            Hello World! Hello World! Hello World! Hello World!
+            Hello World! Hello World! Hello World! Hello World!
+            Hello World! Hello World! Hello World! Hello World!
+            Hello World! Hello World! Hello World! Hello World!
+            Hello World! Hello World! Hello World! Hello World!
+        </p>
+    </article>
+    <hr>
+    <article>
+        <h2>Second Article</h2>
+        <p>
+            Goodbye World! Goodbye World! Goodbye World!
+            Goodbye World! Goodbye World! Goodbye World!
+            Goodbye World! Goodbye World! Goodbye World!
+        </p>
+    </article>
+</div>
+</body>
+</html>
