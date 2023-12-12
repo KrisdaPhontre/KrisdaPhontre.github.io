@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การเลือกเอลิเมนต์ด้วย Pseudo-element Before | After</title>
+    <style>
+        #mainDiv{
+            background-color: aqua;
+            width: auto;
+            text-align: justify;
+            padding: 10px 10px 10px 10px;
+        }
+        p{
+            padding: 10px 10px 5px 5px;
+        }
+        /* p.warning::before {
+            content: "ข้อควรระวัง : ";
+        } */
+        p.warning {
+            color: red;
+            font-style: italic;
+            font-size: 50px;
+        }
+        p.warning::after {
+            content: " : อยากกลับบ้าน";
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>การเลือกเอลิเมนต์ด้วย Pseudo-element Before | After</h1>
+    <div id="mainDiv">
+        <article>
+            <h2>สินค้าใหม่</h2>
+            <p>เครื่องดื่มชูกำลังตรา แจ็คผู้ฆ่ายักษ์ เพิ่มความสดชื่นให้กับคุณ
+                สูตรใหม่ สูตรเพิ่มวิตามินรวม
+            </p>
+            <p class="warning">
+                ไม่ควรดื่มเกิน 2 ขวด
+            </p>
+        </article>
+    </div>
+</body>
+</html>
