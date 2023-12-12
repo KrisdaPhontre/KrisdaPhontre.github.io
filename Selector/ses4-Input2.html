@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การเลือกเอลิเมนต์ของฟอร์ม Exabled | Disbled | Read-only | Read-Write | Placeholder-Shown</title>
+<style>
+.box1 {
+    background-color: aquamarine;
+    width: 500px; height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+.box {
+    display: flex;
+    justify-content: center;
+}
+label{
+    font-size: 20px;
+}
+input {
+    display: flex;
+    width: 300px; height: 30px;
+    border: 3px solid black;
+    background-color: aqua;
+    border-radius: 20px;
+}
+
+input:enabled{
+    color: blue;
+}
+input:disabled{
+    color: #f1f1f1;
+}
+textarea:read-write{
+    background-color: aqua;
+    border-radius: 4px;
+}
+input:read-only{
+    color: red;
+}
+</style>
+</head>
+<body>
+    <h1>การเลือกเอลิเมนต์ของฟอร์ม Exabled | Disbled | Read-only | Read-Write | Placeholder-Shown </h1>
+<nav class="box">
+    <div class="box1">
+        <form action="">
+            <p><label for="">ชื่อสินค้า : </label>
+                <input type="text" name="name" id="name" >
+            </p>
+            <p><label for="">สี : </label>
+                <input type="text" name="color" id="color" disabled>
+            </p>
+            <p>
+                <label for="">ที่อยู่ : </label>
+                <input type="text" name="address" id="address">
+            </p>
+            <p>
+                <label for="">เบอร์ : </label>
+                <input type="tel" name="tel" placeholder="08x-xxx-xxxx">
+            </p>
+            <p>
+                <label for="">ขนส่ง : </label>
+                <input type="ship" value="ไปรษณีย์" readonly>
+            </p>
+        </form>
+    </div>
+</nav>
+</body>
+</html>
