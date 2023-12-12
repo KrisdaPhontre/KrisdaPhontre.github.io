@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การเลือกเอลิเมนต์ของฟอร์ม input pseudo classe</title>
+</head>
+<style>
+    input {
+        margin: 20px auto;
+    }
+    input:-webkit-autofill {
+        border: 3px solid lightblue;
+    }
+    button {
+        margin: 10px 0;
+    }
+    .box1 h1 {
+        margin: 0;
+        font-size: 30px;
+        color: #aaa;
+        background-color: #f1f1f1;
+    }
+    .box1 {
+        width: 500px;
+        height: 500px;
+        background-color: aqua;
+        border-radius: 20px;
+    }
+    .box {
+        display: flex;
+        justify-content: center;
+    }
+    /* input:autofill {
+        border: 3px solid lightblue;
+    } */
+</style>
+<body>
+    <h1>การเลือกเอลิเมนต์ด้วย input</h1>
+    <nav class="box">
+        <div class="box1">
+            <center><h1>Input</h1></center>
+            <form action="post">
+                <label for="email">E-mail</label>
+                    <input type="email" name="email" autocomplete="email">
+                <label for="name">Name</label>
+                    <input type="name" name="name">
+            </form>
+            <button>Login</button>
+            <button>Cancel</button>
+        </div>
+    </nav>
+</body>
+</html>
