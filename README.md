@@ -1,2 +1,1 @@
-# KrisdaPhontre.github.io
-สำหับการส่งงานวิชาการออกแบบและพัฒนาเว็บไซต์
+# KrisdaPhontre.github002.io
