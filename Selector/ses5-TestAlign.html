@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การจัดตำแหน่งข้อความด้วย Text Align</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@600&display=swap');
+    h1 {
+        text-align: center;
+        font-family: 'Mitr', sans-serif;
+        color: blue;
+    }
+    h2 {
+        text-align: center;
+        padding: 10px;
+        background-color: aqua;
+        color: black;
+        line-height: 120%;
+        font-family: 'Mitr', sans-serif;
+        box-shadow: 5px 5px 5px black;
+    }
+    p{
+        font-family: 'Mitr', sans-serif;
+        color: black;
+    }
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    p.center {
+        text-align: center;
+    }
+    p.justify {
+        text-align: justify;
+        width: 400px; height: 200px;
+        background-color: aqua;
+        padding: 20px 20px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px black;
+    }
+    p.left {
+        position: fixed;
+        text-align: left;
+    }
+    p.right {
+        position: fixed;
+        right: 0;
+        text-align: right;
+    }
+    </style>
+</head>
+<body>
+    <h1>การจัดตำแหน่งข้อความด้วย Text Align</h1>
+    <h2>เราสามารถกำหนดค่าต่างๆ ให้กับ text align ได้ดังนี้</h2>
+    <p class="center">center จัดให้อยู่กึ่งกลาง</p>
+    <dir class="box">
+    <p class="justify">Justify กระจายเต็มพื่นที่จัดข้อความด้านขวามื่อให้เท่ากัน <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptatem quisquam veniam aperiam at suscipit consequatur, hic, saepe similique odio, natus corrupti. Maxime atque provident commodi suscipit nulla, ratione magnam?</p>
+    </dir>
+    <p class="left">left จัดข้อความให้ชิดซ้าย </p>
+    <p class="right">right จัดข้อความให้ชิดขวา</p>
+</body>
+</html>
