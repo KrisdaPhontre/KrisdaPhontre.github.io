@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การกำหนดฟอนต์ด้วย font family</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Chonburi&display=swap');
+        /* addfont */
+        @font-face {
+            font-family: myFont1;
+            src: url("./font/MN-KaLong/MNKaLong/MN\ KaLong\ Italic.ttf") format("truetype");
+        }
+        @font-face {
+            font-family: myFont2;
+            src: url("./font/MN-KaLong/MNKaLong/MN\ KaLong.ttf") format("truetype");
+        }
+
+        h1 {
+            font-family: 'Mitr', sans-serif;
+            color: aqua;
+            text-shadow: 3px 4px 5px #aaa;
+            /* -webkit-text-stroke: 0.2px aqua; */
+        }
+        
+        h2 {
+            color: #3887BE;
+            text-shadow: 3px 4px 5px #aaa;
+        }
+
+        div {
+            font-family: 'Chonburi', serif;
+            font-size: 24px;
+            color: aqua;
+            text-shadow: 3px 4px 5px #aaa;
+        }
+
+        p {
+            font-family: myFont1;
+            font-size: 1.5em;
+            font-style: oblique;
+            color: rgb(88, 24, 69,);
+            text-shadow: 10px 10px 9px #fff;
+        }
+
+        p.myclass {
+            font-family: myFont1;
+            font-size: 1.5em;
+        }
+
+    </style>
+</head>
+<body bgcolor="#52D3D8">
+    <h1>การกำหนดฟอนต์ด้วย font family</h1>
+    <p>การกำหนดฟอนต์ที่เหมาะสมกับตัวอักษรบนเว็บเพจ
+        เป็นส่วนหนึ่งที่ทำให้เว็บของเราดูหน้าสนใจมากขึ้น</p>
+    <h2>การกำหนดฟอนต์แบบพิเศษด้วย @font-face</h2>
+        <p class="myclass">
+            เป็นครูสมบัติที่ให้เราสามารถเลือกใช้
+        </p>
+    <div>
+        รูปแบบการใช้ font ภายนอกโดยการดึงมาจาก goole font
+    </div>
+</body>
+</html>
