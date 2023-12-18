@@ -19,9 +19,12 @@
 
         h1 {
             font-family: 'Mitr', sans-serif;
-            color: aqua;
-            text-shadow: 3px 4px 5px #aaa;
+            color: rgb(12, 43, 100);
+            /* text-shadow: 3px 4px 5px #aaa; */
             /* -webkit-text-stroke: 0.2px aqua; */
+            text-decoration: underline; /* การขีดเส้น */
+            text-decoration-color: black;
+            text-decoration-style: double;
         }
         
         h2 {
@@ -32,16 +35,15 @@
         div {
             font-family: 'Chonburi', serif;
             font-size: 24px;
-            color: aqua;
+            color: rgb(8, 80, 80);
             text-shadow: 3px 4px 5px #aaa;
         }
 
-        p {
+        h2 p {
             font-family: myFont1;
             font-size: 1.5em;
             font-style: oblique;
             color: rgb(88, 24, 69,);
-            text-shadow: 10px 10px 9px #fff;
         }
 
         p.myclass {
@@ -50,10 +52,24 @@
             font-style: italic;
             font-weight: lighter;
         }
+        h3 {
+            text-decoration: underline;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+            background-color: #3e3e3e;
+            padding: 2px;
+            line-height: 1.5rem;
+        }
+        span {
+            color: red;
+            background-color: yellow;
+            padding: 1px;
+            line-height: 120%;
+        }
 
     </style>
 </head>
-<body bgcolor="#52D3D8">
+<body>
     <h1>การกำหนดฟอนต์ด้วย font family</h1>
     <p>การกำหนดฟอนต์ที่เหมาะสมกับตัวอักษรบนเว็บเพจ
         เป็นส่วนหนึ่งที่ทำให้เว็บของเราดูหน้าสนใจมากขึ้น</p>
@@ -64,5 +80,13 @@
     <div>
         รูปแบบการใช้ font ภายนอกโดยการดึงมาจาก goole font
     </div>
+
+    <div id="mainDiv">
+        <h3>Fiction Hit</h3>
+        <p> <span>Pertoer Fan </span> have been waitionfor his normal normal nose all fo his life.</p>
+        <h3>Sport News</h3>
+        <p> <span>Man City </span> knooked Arsenal 3:1 Yesterday.</p>
+    </div>
+
 </body>
 </html>
