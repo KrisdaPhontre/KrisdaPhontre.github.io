@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การจัดการเลย์เอาท์เว็บเพจด้วย Position</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            height: 4000px;
+        }
+        .box {
+            height: 100px; width: 100px;
+        }
+        .position {
+            display: flex;
+            justify-content: center;
+        }
+        .mycontainer {
+            position: absolute;
+            width: 500px; height: 500px;
+            background-color: #333;
+        }
+        #box1 {
+            background-color: #9EDDFF;
+            position: relative;
+            left: 50px;
+            top: 50px;
+            z-index: 10;
+        }
+        #box2 {
+            background-color: #80B3FF;
+            position: absolute;
+            left: 20px;
+            top: 100px;
+        }
+        #box3 {
+            background-color: #AED2FF;
+            position: absolute;
+            right: 10px;
+        }
+        #box4 {
+            background-color: #7091F5;
+            position: fixed;
+            z-index: 1;
+        }
+        #box5 {
+            background-color: #8BE8E5;
+            position: sticky;
+            top: 0;
+        }
+        #box6 {
+            background-color: #6F61C0;
+            position: sticky;
+            top: 0;
+        }
+        div.myoverflow {
+            width: 300px; height: 100px;
+            text-align: justify;
+            border: 5px solid rgb(12, 104, 180);
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <a href="#box5"> go to box5</a>
+    <a href="#box6"> go to box6</a>
+    <h1>การจัดการเลย์เอาท์เว็บเพจด้วย Position</h1>
+    <ul>การจัดวางตำแหน่งด้วย position สามารถใส่ค่าต่างๆ ได้ดังนี้
+        <li>
+            static ค่าปกติ
+        </li>
+        <li>
+            Fixed อยู่ในตำแหน่งเดิม
+        </li>
+        <li>
+            Relative จัดวางตามตำแหน่งตามที่เรากำหนด
+        </li>
+        <li>
+            Absolute จัดวางตามเอลิเมนต์แม่
+        </li>
+        <li>
+            stiicky ติดขอบเมือเลื่อนไปถึง
+        </li>
+    </ul>
+    <hr>
+    <div id="box1" class="box"></div>
+    <div class="position">
+        <div class="mycontainer">
+            <div id="box2" class="box"></div>
+            <div id="box3" class="box"></div>
+        </div>
+    </div>
+    <div id="box4" class="box"></div>
+    <div id="box5" class="box"></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="box6" class="box"></div>
+<hr>
+<h2>การจำกัดการแสดงข้อมูลด้วย overflow</h2>
+<div class="myoverflow">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ipsam nemo illo beatae quam iure eum placeat! Provident animi molestiae iusto autem, voluptate perferendis tenetur natus impedit doloribus consequuntur libero, veniam voluptatum iste harum possimus itaque cupiditate. Eligendi ut hic repellendus? Optio provident aliquam dolores corrupti officiis. Laborum, tempore rerum.
+</div>
+</body>
+</html>
