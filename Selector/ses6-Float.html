@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การจัดวางเลย์เอาท์บนเว็บเพจด้วย Float</title>
+    <link rel="stylesheet" href="./font.css">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    .box1 img{
+        float: left;
+    }
+    .box2 img{
+        float: right;
+    }
+    .box3 img{
+        float: none;
+    }
+    .mycontainer {
+        background-color: #EEE7DA;
+        color: #333;
+        width: 960px;
+        margin: 30px auto;
+    }
+    .box {
+        background-color: #FFECD6;
+        color: #333;
+        border: 1px solid black;
+        padding: 10px 30px;
+        margin: 15px;
+    }
+    /* #box1 {
+        
+    } */
+    #box2 {
+        float: left;
+        width: 70%;
+    }
+    #box3 {
+        float: right;
+        width: 30%;
+    }
+</style>
+</head>
+<body>
+    <h1>การจัดวางเลย์เอาท์บนเว็บเพจด้วย Float</h1>
+    <ul> Flost กำหนดให้อิลิเมนต์สามารถลอยอยู่ด้านใดด้านหนึ่ง
+        โดยค่าที่กำหนดได้คือ
+        <li>
+            left, rght (ให้ลอยอยู่ทางด้านซ้ายและด้านขวาตามลำต้น)
+        </li>
+        <li>
+            inherit ลอยตาม parent elemrnt
+        </li>
+        <li>
+            none ไม่ให้มีการลอย (default)
+        </li>
+    </ul>
+    <ul>
+        clear ไม่อนุญาตให้มีการลอย
+        <li>
+            left, rght (ไม่อนุญาตให้ลอยอยู่ทางด้านซ้ายและด้านขวา)
+        </li>
+        <li>
+            both ไม่อนุญาตให้ลอยทั้ง2ด้าน
+        </li>
+    </ul>
+    <hr>
+    <div class="box1">
+        <p>
+            <img src="https://images.wallpaperscraft.com/image/single/torii_art_solitude_129792_1920x1080.jpg"
+                alt="" style="width: 100px;"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt officia voluptatem dolorem, provident et obcaecati, suscipit repellendus atque totam quidem error ullam culpa, eveniet est! Reiciendis nobis error cumque natus!
+        </p>
+    </div>
+    <div class="box2">
+        <p>
+            <img src="https://images.wallpaperscraft.com/image/single/torii_art_solitude_129792_1920x1080.jpg"
+            alt="" style="width: 100px;"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt officia voluptatem dolorem, provident et obcaecati, suscipit repellendus atque totam quidem error ullam culpa, eveniet est! Reiciendis nobis error cumque natus!
+        </p>
+    </div>
+    <div class="box3">
+        <p>
+            <img src="https://images.wallpaperscraft.com/image/single/torii_art_solitude_129792_1920x1080.jpg"
+            alt="" style="width: 100px;"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt officia voluptatem dolorem, provident et obcaecati, suscipit repellendus atque totam quidem error ullam culpa, eveniet est! Reiciendis nobis error cumque natus!
+        </p>
+    </div>
+<hr>
+    <div class="mycontainer">
+        <div id="box1" class="box">
+            <h2>Title 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis autem animi modi id, iure culpa recusandae, voluptate doloribus ab commodi nostrum dolores nisi mollitia at illo excepturi neque ipsum officiis.</p>
+        </div>
+        <div id="box2" class="box">
+            <h2>Title 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis autem animi modi id, iure culpa recusandae, voluptate doloribus ab commodi nostrum dolores nisi mollitia at illo excepturi neque ipsum officiis.</p>
+        </div>
+        <div id="box3" class="box">
+            <h2>Title 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis autem animi modi id, iure culpa recusandae, voluptate doloribus ab commodi nostrum dolores nisi mollitia at illo excepturi neque ipsum officiis.</p>
+        </div>
+    </div>
+</body>
+</html>
