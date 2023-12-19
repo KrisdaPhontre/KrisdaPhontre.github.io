@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@600&display=swap');
+/* font-family: 'Mitr', sans-serif; */
+h1,h2,h3 {
+    font-family: 'Mitr', sans-serif;
+}
+ul, li {
+    font-family: 'Mitr', sans-serif;
+    color: aqua;
+}
