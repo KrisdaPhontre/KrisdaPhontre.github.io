@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การใช้งาน Flex-Propeties</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .item {
+            background-color: #A084E8;
+            border: 5px solid #6F61C0;
+            width: 200px;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .item-1 {
+            
+        }
+        .item-2 {
+            flex-shrink: 2;
+        }
+        .item-3 {
+            flex-grow: 3;
+        }
+        .flex-container {
+            display: flex;
+            background-color: #BC7AF9;
+            /* flex-direction: row; */
+            /* /* flex-wrap: wrap; */
+            justify-content: space-evenly;
+        }
+    </style>
+<body>
+    <div class="flex-container">
+        <div class="item item-1">
+            <h3> Item 1</h3>
+        </div>
+        <div class="item item-2">
+            <h3> Item 2</h3>
+        </div>
+        <div class="item item-3">
+            <h3> Item 3</h3>
+        </div>
+    </div>
+</body>
+</html>
