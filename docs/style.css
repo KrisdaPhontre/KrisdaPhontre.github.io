@@ -4,10 +4,54 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@600&display=swap');
+
 body {
   background-size: 1980px 1080px;
   background-position-x: center;
   object-fit: cover;
+}
+
+.Content1 {
+  display: none;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fadecontent {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: 0;}
+  to { opacity: 1;}
 }
 
   .overlay {
@@ -16,12 +60,13 @@ body {
   position: fixed;
   z-index: 1;
   left: 0; top: 0;
-  background-color: rgb(0,0,0); background-color: rgba(0,0,0, 0.9);
+  background-color: rgb(0,0,0); background-color: rgba(0,0,0, 0.7);
   overflow-x: hidden;
   transition: 0.5s;
 }
 
   .overlay-content {
+  font-family: 'Mitr', sans-serif;
   position: relative;
   top: 25%;
   width: 100%;
@@ -72,16 +117,12 @@ body {
   background-image: url("https://images.wallpaperscraft.com/image/single/girl_anime_art_1122488_800x1280.jpg");
   background-size: 400px 640px;
   background-position: center;
-  border: #000 5px solid;
+  border: 5px solid black;
   border-radius: 40px;
   display: none;
   justify-content: center;
   right: 0;
 }
-
-/* .logo h1 {
-  font-size: 50px;
-} */
 
 .logo {
   position: fixed;
@@ -95,7 +136,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid black;
+  border: 5px solid black;
 }
 .content {
   position: fixed;
@@ -122,10 +163,15 @@ body {
 .change .bar3 {
   transform:translate(0, -11px) rotate(45deg);
 }
+/* 
+@media (max-width: 500px) {
+  width: 100%;
+} */
 
 .text1{
   position: relative;
-  background-color: #5FBDFF;
+  background-size: 400px 100px;
+  background-image: url('/Selector/img/city_evening_snowfall_136478_1920x1080.jpg');
   width: 400px;
   height: 100px;
   border: 5px solid #000;
@@ -142,6 +188,7 @@ body {
 
 .P1 p {
   margin: 10px;
+  font-family: 'Mitr', sans-serif;
 }
 
 .P1 {
@@ -152,10 +199,6 @@ body {
   height:220px;
   background-color: rgba(255, 255, 255, 0.459);
   border-radius: 20px;
-}
-
-.P2-active {
-  margin: 25px auto;
 }
 
 .P2:hover {
@@ -169,6 +212,65 @@ body {
   height: 7px;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
+}
+
+.boxm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 120px;
+  right: 280px;
+  width: 300px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  border: 5px solid black;
+}
+
+.ring {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  display: flex;
+}
+.ring i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fff;
+  transition: 0.5s;
+}
+.ring i:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 6s linear infinite;
+}
+.ring i:nth-child(2) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate 4s linear infinite;
+}
+.ring i:nth-child(3) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate2 10s linear infinite;
+}
+.ring:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .h2 h2 {
@@ -186,6 +288,7 @@ body {
 }
 
 ul {
+  font-family: 'Mitr', sans-serif;
   margin: 10px;
   transition: 0.3s;
 }
@@ -264,64 +367,4 @@ ul:hover {
   font-family: 'Oswald';
   color: #fff;
   font-size: 25px;
-}
-
-.countdown{
-  --number-color: hsl(0 0% 100%);
-  --text-color: hsl(0 0% 25%);
-  --dot-color: hsl(0 0% 10%);
-  --dot-color-remaining: hsl(182, 100%, 66%);
-  --dot-color-active: hsl(0 100% 50%);
-  font-family: system-ui, sans-serif;
-  display: grid;
-  position: absolute;
-  bottom: 0; right: 0;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  /* width: min(60rem, 100%); */
-  margin-inline: auto;
-  background-color: rgba(17, 110, 231, 0.5);
-  border-radius: 20px;
-  container: inline-size;
-  > .part {
-    aspect-ratio: 1/1;
-    margin: 5px;
-    display: grid;
-    place-items: center;
-    > .remaining {
-      grid-area: 1/1;
-      color: hsl(0 0% 100%);
-      display: grid;
-      text-align: center;
-      font-size: 4cqi;
-      >.number {
-        color: var(--number-color);
-      }
-      >.text {
-        color: var(--text-color);
-        text-transform: uppercase;
-        font-size: 0.5em;
-
-      }
-    }
-    > .dot-container {
-      grid-area: 1/1;
-      height: 100%;
-      width: 4%;
-      rotate: calc(360deg / var(--dots) * var(--dot-idx));
-      > .dot {
-        width: 100%;
-        aspect-ratio: 1/1;
-        background-color: var(--dot-color);
-        border-radius: 50%;
-        transition: background-color .25s;
-        &[data-active=true]{
-          background-color: var(--dot-color-remaining);
-          &[data-lastactive=true]{
-            background-color: var(--dot-color-active);
-          }
-        }
-      }
-    }
-  }
 }
