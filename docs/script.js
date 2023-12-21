@@ -13,6 +13,7 @@ function myFunctions(i) {
     if (menu.className === 'menu') {
       menu.className += ' menu-active'
     }   else {
+      menu.className = "tapbar";
       menu.className = "menu";
     }
 }
