@@ -194,6 +194,7 @@ body {
   display: flex;
   align-items: center;
   overflow-x: hidden;
+  
   transition: 0.5s;
 }
 
@@ -303,6 +304,7 @@ body {
 }
 
 ul {
+  
   font-family: 'Mitr', sans-serif;
   margin: 10px;
   color: aqua;
