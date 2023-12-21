@@ -382,12 +382,14 @@ ul:hover {
 @import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
 
 .container {
-	position: relative;
+	position: fixed;
+  top: 200px;
+  left: 50px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	gap: 1em;
-	width: 400px;
-	height: 250px;
+	width: 800px;
+	height: 500px;
 	transition: all 400ms;
 }
 
@@ -403,6 +405,7 @@ ul:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+  border-radius: 20px;
 }
 
 .container .box:hover {
