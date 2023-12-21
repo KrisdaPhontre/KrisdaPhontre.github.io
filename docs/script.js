@@ -19,7 +19,7 @@ function myFunctions(i) {
 }
 
 function activeshowPage(){
-  let MyVar = setTimeout(showPage, 1000);
+  let MyVar = setTimeout(showPage, 3000);
 }
 
 function showPage() {
