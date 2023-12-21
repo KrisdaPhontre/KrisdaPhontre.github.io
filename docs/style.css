@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@600&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -15,9 +16,8 @@
   color: transparent;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@600&display=swap');
-
 body {
+  font-family: 'Mitr', sans-serif;
   background-size: 1980px 1080px;
   background-position-x: center;
   object-fit: cover;
@@ -135,6 +135,7 @@ body {
 }
 
 .logo {
+  font-family: 'Mitr', sans-serif;
   position: fixed;
   width: 100%;
   height: 100px;
@@ -301,6 +302,7 @@ body {
 ul {
   font-family: 'Mitr', sans-serif;
   margin: 10px;
+  color: aqua;
   transition: 0.3s;
 }
 
