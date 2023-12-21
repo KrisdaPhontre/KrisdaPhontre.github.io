@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+#instagram {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  background-image: -moz-radial-gradient(50px 20px,circle farthest-corner,#FFDC80, #FCAF45, #E1306C, #833AB4 );
+  background-image: -webkit-radial-gradient(50px 20px,circle farthest-corner,#FFDC80, #FCAF45, #E1306C, #833AB4 );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@600&display=swap');
 
 body {
