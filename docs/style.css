@@ -124,6 +124,7 @@ body {
 }
 
 .menu {
+  position: absolute;
   width: 300px;
   height: 600px;
   margin: 10px;
@@ -218,9 +219,17 @@ body {
   bottom: auto;
   margin: 10px;
   width: 270px;
-  height:350px;
+  height:340px;
   background-color: rgba(255, 255, 255, 0.459);
   border-radius: 20px;
+}
+
+.P21 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
 }
 
 .P2:hover {
@@ -228,13 +237,14 @@ body {
 }
 
 .P2 {
-  position: absolute;
-  bottom: 5px;
-  left: 95px;
-  width: 120px;
-  height: 7px;
+  
+  font-size: 16px;
+  text-align: center;
+  width: 200px;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
+  margin: auto;
+  margin-bottom: 5px;
 }
 
 .h2 h2 {
@@ -264,21 +274,8 @@ ul:hover {
   transition: 0.3s;
 }
 
-.tapbar i {
-  width: auto;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-  margin: 25px;
-  font-size: 20px;
-}
-
 .tapbar-active {
   display: block !important;
-}
-
-.tapbar i:hover{
-  color: #f1f1f1;
 }
 
 .tapbar {
