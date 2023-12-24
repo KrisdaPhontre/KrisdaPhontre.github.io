@@ -496,14 +496,14 @@ section p {
   font-size: 1.5rem;
 }
 
-#css {
+#game {
   background-color: var(--sect1);
 }
 
-#html {
+#like {
   background-color: var(--sect2);
 }
 
-#js {
+#me {
   background-color: var(--sect3);
 }
