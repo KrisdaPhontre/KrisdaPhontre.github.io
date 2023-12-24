@@ -22,9 +22,11 @@ body {
   background-position-x: center;
   object-fit: cover;
 }
+
 .Content1 {
   display: none;
 }
+
 .lds-dual-ring {
   display: inline-block;
   width: 80px;
@@ -34,6 +36,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .lds-dual-ring:after {
   content: " ";
   display: block;
@@ -45,6 +48,7 @@ body {
   border-color: #fff transparent #fff transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
+
 @keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg);
@@ -118,6 +122,7 @@ body {
   display: block !important;
   transition: 1.3s;
 }
+
 .menu {
   width: 300px;
   height: 600px;
@@ -168,16 +173,14 @@ body {
 .change .bar1 {
   transform:translate(0, 11px) rotate(-45deg);
 }
+
 .change .bar2 {
   opacity: 0;
 }
+
 .change .bar3 {
   transform:translate(0, -11px) rotate(45deg);
 }
-/* 
-@media (max-width: 500px) {
-  width: 100%;
-} */
 
 .text1{
   position: relative;
@@ -223,6 +226,7 @@ body {
 .P2:hover {
   background-color: rgba(190, 190, 190, 0.9);
 }
+
 .P2 {
   position: absolute;
   bottom: 5px;
@@ -232,8 +236,6 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
 }
-
-
 
 .h2 h2 {
   width: 150px;
@@ -455,13 +457,14 @@ ul:hover {
 .head a:nth-child(1):hover {
   --clr: var(--sect1);
 }
+
 .head a:nth-child(2):hover {
   --clr: var(--sect2);
 }
+
 .head a:nth-child(3):hover {
   --clr: var(--sect3);
 }
-
 
 .head:after {
   position: absolute;
