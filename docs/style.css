@@ -204,7 +204,6 @@ body {
   display: flex;
   align-items: center;
   overflow-x: hidden;
-  
   transition: 0.5s;
 }
 
