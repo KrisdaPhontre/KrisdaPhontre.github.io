@@ -5,6 +5,18 @@
   box-sizing: border-box;
 }
 
+  @media (max-width: 500px) {
+    #text1 {
+      width: 100%;
+    }
+    #container {
+      width: 400px;
+      height: 400px;
+    }
+    div .P21 {
+      display: none;
+    }
+  }
 #instagram {
   font-size: 3rem;
   font-weight: bold;
@@ -24,7 +36,6 @@
 
 body {
   font-family: 'Mitr', sans-serif;
-  background-size: 1980px 1080px;
   background-position-x: center;
   object-fit: cover;
 }
