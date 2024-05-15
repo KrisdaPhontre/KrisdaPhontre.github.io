@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@700&display=swap');
+/* font-family: 'Mitr', sans-serif; */
+h1 {
+    color:white;
+    font-family: 'Mitr', sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+div {
+    position: relative;
+    right: 30px;
+    font-size: 30px;
+}
+.box {
+    position: absolute;
+    color:white;
+    font-family: 'Mitr', sans-serif;
+    
+}
+img {
+    position: fixed;
+    width: 15%;
+    margin: 50px;
+}
+.img1 h1 {
+    color: #000;
+    background-color: bisque;
+    position: fixed;
+    margin: 10px;
+    width: 200px; height: auto;
+    top: 510px; left: 50px;
+    border-radius: 20px;
+}
