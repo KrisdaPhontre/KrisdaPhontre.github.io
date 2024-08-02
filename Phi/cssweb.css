@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@700&display=swap');
 /* font-family: 'Mitr', sans-serif; */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 h1 {
     color:white;
     font-family: 'Mitr', sans-serif;
@@ -30,4 +35,10 @@ img {
     width: 200px; height: auto;
     top: 510px; left: 50px;
     border-radius: 20px;
+}
+
+nav {
+    background-color: aqua;
+    height: 100%;
+    width: 100px;
 }
