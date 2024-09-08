@@ -175,14 +175,14 @@ body {
 
 .logo {
   font-family: 'Mitr', sans-serif;
-  position: fixed;
   width: 100%;
   height: 100px;
   background-image: url('./img/cat.png');
   background-position-x: center;
   background-position-y: -90px;
   color: #00b7ff;
-  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,7 +234,7 @@ body {
   transition: 0.5s;
 }
 
-.new{
+#new{
   position: fixed;
   margin: 20px;
   top: 10%;
@@ -243,6 +243,9 @@ body {
   background-color: rgba(255, 255, 255, 0.459);
   border-radius: 20px;
   text-align: left;
+}
+#new p {
+  margin: 10px;
 }
 
 .P1 i {
