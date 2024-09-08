@@ -128,15 +128,29 @@ body {
   font-size: 60px;
   }
 
-  @media screen and (max-height: 450px) {
+  @media screen and (max-width: 500px) {
   .overlay a {font-size: 20px}
+  #container{
+    display: none;
+  }
   .overlay .closebtn {
     font-size: 40px;
     top: 15px;
     right: 35px;
     }
   }
-
+  @media screen and (max-height: 500px){
+    #container{
+      display: none;
+    }
+    #mylink{
+      width: 40%;
+      height: 60%;
+    }
+    #mylink .P1{
+      display: none;
+    }
+  }
 .menu-active {
   display: block !important;
   transition: 1.3s;
@@ -149,7 +163,7 @@ body {
   margin: 10px;
   margin-top: 110px;
   position: fixed;
-  background-image: url("https://images.wallpaperscraft.com/image/single/girl_anime_art_1122488_800x1280.jpg");
+  background-image: url("./img/FurinaW.png");
   background-size: 400px 640px;
   background-position: center;
   border: 5px solid black;
@@ -167,7 +181,7 @@ body {
   background-image: url('./img/cat.png');
   background-position-x: center;
   background-position-y: -90px;
-  color: #f1f1f1;
+  color: #00b7ff;
   border-radius: 20px;
   display: flex;
   justify-content: center;
