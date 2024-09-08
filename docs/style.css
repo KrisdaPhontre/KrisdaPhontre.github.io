@@ -234,7 +234,7 @@ body {
   transition: 0.5s;
 }
 
-#new{
+.new{
   position: fixed;
   margin: 20px;
   top: 10%;
@@ -244,7 +244,7 @@ body {
   border-radius: 20px;
   text-align: left;
 }
-#new p {
+.new p {
   margin: 10px;
 }
 
