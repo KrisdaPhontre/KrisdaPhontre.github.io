@@ -142,6 +142,12 @@ new Vue({
     }
   },
   mounted() {
-    console.log("Audio initialized:", this.audio.src);
+    // เริ่มเล่นเพลงเมื่อเปิดหน้า (หากเบราว์เซอร์อนุญาต)
+    this.audio.play().then(() => {
+      console.log("Audio started successfully");
+      this.isTimerPlaying = true;
+    }).catch((error) => {
+      console.warn("Autoplay was prevented:", error);
+    });
   }
 });
