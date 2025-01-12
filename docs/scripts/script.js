@@ -11,7 +11,7 @@ new Vue({
       tracks: [
         {
           name: "40 km/hr - Terracotta",
-          cover: "./img1/14.jpg",
+          cover: "./img1/1.jpg",
           source: "./mp3/1.mp4",
           favorited: false
         },
