@@ -11,19 +11,19 @@ new Vue({
       tracks: [
         {
           name: "40 km/hr - Terracotta",
-          cover: "./img/1.jpg",
+          cover: "./img1/14.jpg",
           source: "./mp3/1.mp4",
           favorited: false
         },
         {
           name: "น้ำหอม - COCKTAIL",
-          cover: "./img/2.jpg",
+          cover: "./img1/15.jpg",
           source: "./mp3/2.mp4",
-          favorited: true
+          favorited: false
         },
         {
           name: "เพลงประจำวัน (PiXXeL)",
-          cover: "./img/3.png",
+          cover: "./img1/16.png",
           source: "./mp3/3.mp4",
           favorited: false
         }
