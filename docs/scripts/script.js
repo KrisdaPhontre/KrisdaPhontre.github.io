@@ -11,13 +11,13 @@ new Vue({
       tracks: [
         {
           name: "40 km/hr - Terracotta",
-          cover: "./img1/14.jpg",
+          cover: "./img1/14.JPG",
           source: "./mp3/1.mp4",
           favorited: false
         },
         {
           name: "น้ำหอม - COCKTAIL",
-          cover: "./img1/15.jpg",
+          cover: "./img1/15.JPG",
           source: "./mp3/2.mp4",
           favorited: false
         },
