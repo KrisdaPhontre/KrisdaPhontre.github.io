@@ -11,13 +11,13 @@ new Vue({
       tracks: [
         {
           name: "40 km/hr - Terracotta",
-          cover: "./img1/14.JPG",
+          cover: "./img1/14.jpg",
           source: "./mp3/1.mp4",
           favorited: false
         },
         {
           name: "น้ำหอม - COCKTAIL",
-          cover: "./img1/15.JPG",
+          cover: "./img1/15.jpg",
           source: "./mp3/2.mp4",
           favorited: false
         },
@@ -44,22 +44,28 @@ new Vue({
       }
     },
     generateTime() {
-      const width = (100 / this.audio.duration) * this.audio.currentTime;
-      this.barWidth = `${width}%`;
-      this.circleLeft = `${width}%`;
-
-      const formatTime = (time) => String(Math.floor(time)).padStart(2, "0");
-
-      this.duration = `${formatTime(this.audio.duration / 60)}:${formatTime(this.audio.duration % 60)}`;
-      this.currentTime = `${formatTime(this.audio.currentTime / 60)}:${formatTime(this.audio.currentTime % 60)}`;
+      let width = (100 / this.audio.duration) * this.audio.currentTime;
+      this.barWidth = width + "%";
+      this.circleLeft = width + "%";
+      let durmin = Math.floor(this.audio.duration / 60);
+      let dursec = Math.floor(this.audio.duration - durmin * 60);
+      let curmin = Math.floor(this.audio.currentTime / 60);
+      let cursec = Math.floor(this.audio.currentTime - curmin * 60);
+      durmin = durmin < 10 ? "0" + durmin : durmin;
+      dursec = dursec < 10 ? "0" + dursec : dursec;
+      curmin = curmin < 10 ? "0" + curmin : curmin;
+      cursec = cursec < 10 ? "0" + cursec : cursec;
+      this.duration = durmin + ":" + dursec;
+      this.currentTime = curmin + ":" + cursec;
     },
     updateBar(x) {
-      const progress = this.$refs.progress;
-      const maxduration = this.audio.duration;
-      const position = x - progress.offsetLeft;
-      const percentage = Math.max(0, Math.min((100 * position) / progress.offsetWidth, 100));
-      this.barWidth = `${percentage}%`;
-      this.circleLeft = `${percentage}%`;
+      let progress = this.$refs.progress;
+      let maxduration = this.audio.duration;
+      let position = x - progress.offsetLeft;
+      let percentage = (100 * position) / progress.offsetWidth;
+      percentage = Math.max(0, Math.min(percentage, 100));
+      this.barWidth = percentage + "%";
+      this.circleLeft = percentage + "%";
       this.audio.currentTime = (maxduration * percentage) / 100;
       this.audio.play();
     },
@@ -71,16 +77,20 @@ new Vue({
     prevTrack() {
       this.transitionName = "scale-in";
       this.isShowCover = false;
-      this.currentTrackIndex =
-        this.currentTrackIndex > 0 ? this.currentTrackIndex - 1 : this.tracks.length - 1;
+      this.currentTrackIndex = 
+        this.currentTrackIndex > 0 
+        ? this.currentTrackIndex - 1 
+        : this.tracks.length - 1;
       this.currentTrack = this.tracks[this.currentTrackIndex];
       this.resetPlayer();
     },
     nextTrack() {
       this.transitionName = "scale-out";
       this.isShowCover = false;
-      this.currentTrackIndex =
-        this.currentTrackIndex < this.tracks.length - 1 ? this.currentTrackIndex + 1 : 0;
+      this.currentTrackIndex = 
+        this.currentTrackIndex < this.tracks.length - 1 
+        ? this.currentTrackIndex + 1 
+        : 0;
       this.currentTrack = this.tracks[this.currentTrackIndex];
       this.resetPlayer();
     },
@@ -97,44 +107,47 @@ new Vue({
       }, 300);
     },
     favorite() {
-      this.tracks[this.currentTrackIndex].favorited = !this.tracks[this.currentTrackIndex].favorited;
+      this.tracks[this.currentTrackIndex].favorited = 
+        !this.tracks[this.currentTrackIndex].favorited;
     }
   },
   created() {
-    const vm = this;
+    let vm = this;
     this.currentTrack = this.tracks[0];
-    this.audio = new Audio(this.currentTrack.source);
+    this.audio = new Audio();
+    this.audio.src = this.currentTrack.source;
 
-    this.audio.ontimeupdate = () => vm.generateTime();
-    this.audio.onloadedmetadata = () => vm.generateTime();
-    this.audio.onended = () => {
+    this.audio.ontimeupdate = function () {
+      vm.generateTime();
+    };
+    this.audio.onloadedmetadata = function () {
+      vm.generateTime();
+    };
+    this.audio.onended = function () {
       vm.nextTrack();
       vm.isTimerPlaying = true;
     };
 
-    this.audio.onerror = () => {
+    this.audio.onerror = function () {
       console.error("Failed to load audio source:", vm.audio.src);
     };
 
     // Prefetch cover images
-    this.tracks.forEach((track) => {
-      const link = document.createElement("link");
+    for (let track of this.tracks) {
+      let link = document.createElement('link');
       link.rel = "prefetch";
       link.href = track.cover;
       link.as = "image";
       document.head.appendChild(link);
-    });
+    }
   },
   mounted() {
     // เริ่มเล่นเพลงเมื่อเปิดหน้า (หากเบราว์เซอร์อนุญาต)
-    this.audio
-      .play()
-      .then(() => {
-        console.log("Audio started successfully");
-        this.isTimerPlaying = true;
-      })
-      .catch((error) => {
-        console.warn("Autoplay was prevented:", error);
-      });
+    this.audio.play().then(() => {
+      console.log("Audio started successfully");
+      this.isTimerPlaying = true;
+    }).catch((error) => {
+      console.warn("Autoplay was prevented:", error);
+    });
   }
 });
